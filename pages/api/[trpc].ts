@@ -1,3 +1,5 @@
+'server-only';
+
 import * as trpcNext from '@trpc/server/adapters/next';
 import { createContext } from '~/trpc-server/context';
 import { appRouter } from '~/trpc-server/routers/_app';
@@ -12,8 +14,6 @@ export default trpcNext.createNextApiHandler({
     }
   },
   batching: {
-    enabled: true
-  }
-})
-
-
+    enabled: true,
+  },
+});
